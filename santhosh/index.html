@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>urban nest</title>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <h2>Urban Nest</h2>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="facilities.html">Facilities</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+      <li><a href="log in.html">Log in</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    </nav>
+  </nav>
+
+
+  <script src="script.js"></script>
+
+<br>
+<br>
+  <div class="image-container">
+    <img src="house.png" alt="Responsive Image">
+    <h1>why urban nest?</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+       rem alias exercitationem porro nemo, placeat vero, distinctio perferendis veritatis 
+      quis, ipsa non. Perspiciatis aliquam quae corrupti fugiat, quasi obcaecati officiis.</p>
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+    <h1>Hostel Activities</h1>
+    <div id="activities">
+        
+    </div>
+
+    <script>
+       
+        var activitiesData = [
+            {
+                title: "City Tour",
+                description: "Explore the city's main attractions with our guided tour.",
+                time: "Every Monday and Friday at 10 AM",
+                image: "city tour.jpg"
+            },
+            {
+                title: "Pub Crawl",
+                description: "Join us for a fun night out and experience the local nightlife.",
+                time: "Every Wednesday at 8 PM",
+                image: "pup.jpg"
+            },
+            {
+                title: "Movie Night",
+                description: "Enjoy a cozy movie night in our common area.",
+                time: "Every Thursday at 7 PM",
+                image: "movie night.jpg"
+            }
+         
+        ];
+
+        
+        function createActivityElement(activity) {
+            var activityElement = document.createElement("div");
+            activityElement.className = "activity";
+
+            var imageElement = document.createElement("img");
+            imageElement.src = activity.image;
+            imageElement.alt = activity.title;
+            activityElement.appendChild(imageElement);
+
+            var titleElement = document.createElement("h2");
+            titleElement.textContent = activity.title;
+            activityElement.appendChild(titleElement);
+
+            var descriptionElement = document.createElement("p");
+            descriptionElement.textContent = activity.description;
+            activityElement.appendChild(descriptionElement);
+
+            var timeElement = document.createElement("p");
+            timeElement.textContent = "Time: " + activity.time;
+            activityElement.appendChild(timeElement);
+
+            return activityElement;
+        }
+
+       
+        function displayActivities() {
+            var activitiesContainer = document.getElementById("activities");
+
+            activitiesData.forEach(function(activity) {
+                var activityElement = createActivityElement(activity);
+                activitiesContainer.appendChild(activityElement);
+            });
+        }
+
+      
+        displayActivities();
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<div class="image-container1">
+  <img src="work.png" alt="Example Image">
+</div>
+     <br>
+     <br>
+     <br>
+     <br>
+
+    <h1>Facilities and Services</h1>
+    <div class="facility">
+        <h2>24-Hour Reception</h2>
+        <p>Our friendly staff is available 24/7 to assist you with any inquiries or requests.</p>
+    </div>
+
+    <div class="facility">
+        <h2>Luggage Storage</h2>
+        <p>Traveling light? We provide secure luggage storage facilities to keep your belongings safe.</p>
+    </div>
+
+    <div class="facility">
+        <h2>Kitchen Facilities</h2>
+        <p>Our fully-equipped kitchen is available for guests to prepare their own meals, saving money on dining out.</p>
+    </div>
+
+    <div class="facility">
+        <h2>Bike Rentals</h2>
+        <p>Explore the city on two wheels! We offer bike rentals for guests to enjoy the surrounding area at their own pace.</p>
+    </div>
+
+    <div class="facility">
+
+      <div class="image-container2">
+        <img src="Screenshot (4).png" alt="Example Image">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Testimonials and Reviews</h1>
+    <div class="testimonial">
+        <div class="testimonial-content">
+            <p>"I had an amazing stay at the hostel! The staff was friendly, the rooms were clean, and the location was perfect for exploring the city."</p>
+            <p class="testimonial-author">- John Doe</p>
+        </div>
+    </div>
+
+    <div class="testimonial">
+        <div class="testimonial-content">
+            <p>"This hostel exceeded my expectations. The facilities were great, and the social atmosphere made it easy to meet new people. I would highly recommend it!"</p>
+            <p class="testimonial-author">- Jane Smith</p>
+        </div>
+    </div>
+
+    <div class="testimonial">
+        <div class="testimonial-content">
+            <p>"I've stayed in many hostels, but this one stands out. The staff went above and beyond to make me feel welcome, and the organized activities made my trip unforgettable."</p>
+            <p class="testimonial-author">- David Johnson</p>
+    <a href="leave-review.html" class="leave-review-link">Leave a Review</a>
+    </div>
+    </div>
+    </div>
+<br>
+<br>
+    <div class="image-container3">
+        <img src="booking.jpg" alt="Example Image">
+    </div>
+    
+    <div class="booking-section">
+        <h2>Booking and Availability</h2>
+        <p>Check room availability and book your preferred room type:</p>
+        <form id="booking-form">
+          <label for="check-in">Check-in Date:</label>
+          <input type="date" id="check-in" name="check-in" required>
+      
+          <label for="check-out">Check-out Date:</label>
+          <input type="date" id="check-out" name="check-out" required>
+      
+          <label for="room-type">Room Type:</label>
+          <select id="room-type" name="room-type" required>
+            <option value="">Select Room Type</option>
+            <option value="single">Single Room</option>
+            <option value="shared">Shared Room</option>
+            <option value="dormitory">Dormitory</option>
+          </select>
+        </form>
+      </div>
+
+      <div class="non">
+      <button type="submit">Check Availability</button>
+      </div>
+
+
+      <br>
+      <br>
+      <br>
+      <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p> Street, City</p>
+            <p>Email: urbannest.com</p>
+            <p>Phone: +19 9894471629</p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Rooms</a></li>
+              <li><a href="#">Facilities</a></li>
+              <li><a href="#">Booking</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 urban nest Hostel. All rights reserved.</p>
+        </div>
+      </footer>
+      
+
+</body>
+</html>
+

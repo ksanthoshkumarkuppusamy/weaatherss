@@ -1,0 +1,30 @@
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .form {
+    display: none;
+  }
+  
+  .form input,
+  .form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .form button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+  }
+  
+  .form button:hover {
+    background-color: #df362c;
+  }
+  
